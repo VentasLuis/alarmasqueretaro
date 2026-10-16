@@ -160,11 +160,13 @@ body{
 .hero-right{
     position:relative;
 
-    background-image:url("../img/hero-security.jpg");
+    background-image:url("../img/hero-security.jpg.png");
 
     background-size:cover;
-    background-position:center;
+    background-position:right center;
     background-repeat:no-repeat;
+
+    min-height:100vh;
 }
 
 .hero-image-overlay{
