@@ -4,18 +4,24 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#ffffff;
     font-family:'Poppins',sans-serif;
+    background:#f7f8fa;
     color:#0b2154;
 }
+
+/* HERO */
 
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:70px;
+    gap:60px;
     padding:80px;
 }
 
@@ -28,20 +34,30 @@ body{
 }
 
 .logo{
-    width:110px;
-    margin-bottom:30px;
+    width:90px;
+    margin-bottom:25px;
+}
+
+.eyebrow{
+    display:block;
+    color:#0052cc;
+    font-weight:600;
+    letter-spacing:2px;
+    font-size:.9rem;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:4rem;
-    line-height:1.1;
-    color:#004B87;
+    font-size:5rem;
+    line-height:1;
+    color:#003b87;
     margin-bottom:25px;
 }
 
 .hero p{
     font-size:1.2rem;
     line-height:1.8;
+    color:#334155;
     margin-bottom:30px;
 }
 
@@ -52,25 +68,32 @@ body{
 }
 
 .btn-primary{
-    background:#004B87;
+    background:#0052cc;
     color:white;
     text-decoration:none;
-    padding:16px 30px;
-    border-radius:12px;
-    font-weight:bold;
+    padding:16px 32px;
+    border-radius:16px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .btn-primary:hover{
-    background:#00325E;
+    transform:translateY(-3px);
 }
 
 .btn-secondary{
-    border:2px solid #004B87;
-    color:#004B87;
+    border:2px solid #0052cc;
+    color:#0052cc;
     text-decoration:none;
-    padding:16px 30px;
-    border-radius:12px;
-    font-weight:bold;
+    padding:16px 32px;
+    border-radius:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+    background:#0052cc;
+    color:white;
 }
 
 .advisor{
@@ -80,35 +103,197 @@ body{
 }
 
 .avatar{
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     border-radius:50%;
     background:#d9d9d9;
 }
 
-.placeholder-image{
-    height:500px;
+.hero-photo{
+    width:100%;
+    height:600px;
+    object-fit:cover;
     border-radius:24px;
-    background:#eef2f7;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:20px;
-    font-size:22px;
-    color:#6b7280;
-    font-weight:bold;
+    box-shadow:0 20px 50px rgba(0,0,0,.1);
 }
+
+/* SECCIONES */
+
+.concerns,
+.solutions,
+.benefits,
+.stats,
+.agenda{
+    padding:90px 80px;
+}
+
+.concerns h2,
+.solutions h2,
+.benefits h2,
+.stats h2,
+.agenda h2{
+    font-size:3rem;
+    color:#003b87;
+    margin-bottom:15px;
+}
+
+.concerns > p,
+.solutions > p,
+.benefits > p,
+.stats > p,
+.agenda > p{
+    color:#64748b;
+    margin-bottom:35px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#003b87;
+    margin-bottom:15px;
+}
+
+/* HOGAR / NEGOCIO */
+
+.solution-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.solution-card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.solution-card:hover{
+    transform:translateY(-8px);
+}
+
+/* BENEFICIOS */
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.benefit-grid div{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+/* ESTADISTICAS */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.stat strong{
+    display:block;
+    font-size:2rem;
+    color:#0052cc;
+    margin-bottom:10px;
+}
+
+/* FORMULARIO */
+
+.agenda-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.agenda-form input{
+    padding:15px;
+    border:1px solid #dbe1e8;
+    border-radius:12px;
+    font-size:1rem;
+}
+
+.agenda-form button{
+    grid-column:1 / -1;
+    padding:18px;
+    border:none;
+    background:#0052cc;
+    color:white;
+    border-radius:14px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    padding:60px 80px;
+    background:#003b87;
+    color:white;
+    text-align:center;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
 
     .hero{
         flex-direction:column;
-        padding:50px 20px;
+        padding:40px 20px;
     }
 
     .hero h1{
         font-size:3rem;
+    }
+
+    .concerns,
+    .solutions,
+    .benefits,
+    .stats,
+    .agenda{
+        padding:60px 20px;
+    }
+
+    .agenda-form{
+        grid-template-columns:1fr;
     }
 
 }
