@@ -272,11 +272,3 @@ body{
         font-size:2.4rem;
     }
 }
-
-.hero-right{
-    position:relative;
-
-    min-height:100vh;
-
-    background:red !important;
-}
