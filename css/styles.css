@@ -13,12 +13,17 @@ body{
 /* HERO */
 
 .hero{
+    position:relative;
+
     min-height:100vh;
 
-    display:grid;
-    grid-template-columns:50% 50%;
+    display:flex;
+    align-items:center;
 
-    overflow:hidden;
+    background-image:url("../img/hero-security.jpg.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
 /* LADO IZQUIERDO */
