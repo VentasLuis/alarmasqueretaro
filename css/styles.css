@@ -65,23 +65,27 @@ body{
 .top-brand{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:20px;
 
     margin-bottom:50px;
 }
 
 .logo{
-    width:65px;
+    width:95px;
 }
 
 .top-brand h3{
     color:white;
-    font-size:2rem;
+    font-size:2.3rem;
+    font-weight:700;
 }
 
 .top-brand p{
-    color:rgba(255,255,255,.8);
+    color:#69b3ff;
+    font-size:1.05rem;
+    font-weight:600;
 }
+``
 
 /* ETIQUETA */
 
